@@ -20,18 +20,19 @@ public class GameOverMenu : MenuBase
 
 	GameProgress GameProgress => GameProgress.Instance;
 
-	public override void Open() => Open(true);
-
 	void Awake()
 	{
-		mainMenuButton.onClick.AddListener(OnMenuButtonClicked);
+		mainMenuButton.onClick.AddListener(Close);
 	}
 
-	void OnMenuButtonClicked()
+	public override void Close()
 	{
-		Close();
+		gameObject.SetActive(false);
+		Time.timeScale = 1f;
 		SceneManager.Instance.LoadScene(SceneManager.Instance.MainMenu);
 	}
+
+	public override void Open() => Open(true);
 
 	public void Open(bool completedMission)
 	{
