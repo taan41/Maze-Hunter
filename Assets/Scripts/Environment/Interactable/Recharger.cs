@@ -1,0 +1,17 @@
+public class Recharger : Interactable
+{
+	void Awake()
+	{
+		prompts = new string[] { "recharge energy" };
+	}
+
+	protected override void PerformAction(int state)
+	{
+		Player.Instance.energy.Change(Player.Instance.energy.max);
+
+		if (state == 0)
+		{
+			gameObject.SetActive(false);
+		}
+	}
+}

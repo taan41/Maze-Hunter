@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MaskHands
+  m_Mask: 00000000000000000000000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: AngelRing
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/root
+    m_Weight: 0
+  - m_Path: Armature/root/Hips
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/Spine
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Belt.001
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Belt.001/Belt.002
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Belt.001/Belt.002/Belt.003
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/Bang.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/Bang.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/HairSide.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/HairSide.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/Left Eye
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/Right Eye
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Head/Ring
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Neck/Hood
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Index
+      Proximal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Index
+      Proximal.L/Index Intermediate.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Index
+      Proximal.L/Index Intermediate.L/Index Distal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Little
+      Proximal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Little
+      Proximal.L/Little Intermediate.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Little
+      Proximal.L/Little Intermediate.L/Little Distal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Middle
+      Proximal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Middle
+      Proximal.L/Middle Intermediate.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Middle
+      Proximal.L/Middle Intermediate.L/Middle Distal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Ring
+      Proximal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Ring
+      Proximal.L/Ring Intermediate.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Ring
+      Proximal.L/Ring Intermediate.L/Ring Distal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Thumb
+      Proximal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Thumb
+      Proximal.L/Thumb Intermediate.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Thumb
+      Proximal.L/Thumb Intermediate.L/Thumb Distal.L
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Index
+      Proximal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Index
+      Proximal.R/Index Intermediate.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Index
+      Proximal.R/Index Intermediate.R/Index Distal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Little
+      Proximal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Little
+      Proximal.R/Little Intermediate.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Little
+      Proximal.R/Little Intermediate.R/Little Distal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Middle
+      Proximal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Middle
+      Proximal.R/Middle Intermediate.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Middle
+      Proximal.R/Middle Intermediate.R/Middle Distal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Ring
+      Proximal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Ring
+      Proximal.R/Ring Intermediate.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Ring
+      Proximal.R/Ring Intermediate.R/Ring Distal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Thumb
+      Proximal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Thumb
+      Proximal.R/Thumb Intermediate.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/Spine/Chest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Thumb
+      Proximal.R/Thumb Intermediate.R/Thumb Distal.R
+    m_Weight: 1
+  - m_Path: Armature/root/Hips/UpperLeg.L
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/UpperLeg.L/LowerLeg.L
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/UpperLeg.R
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/UpperLeg.R/LowerLeg.R
+    m_Weight: 0
+  - m_Path: Armature/root/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+    m_Weight: 0
+  - m_Path: Body
+    m_Weight: 1
+  - m_Path: Coat
+    m_Weight: 1
+  - m_Path: Eye
+    m_Weight: 1
+  - m_Path: EyeLash
+    m_Weight: 1
+  - m_Path: EyeLight
+    m_Weight: 1
+  - m_Path: Face
+    m_Weight: 1
+  - m_Path: Hair
+    m_Weight: 1
