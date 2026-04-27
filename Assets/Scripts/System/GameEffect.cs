@@ -57,14 +57,14 @@ public class GameEffect : MonoBehaviour
 		}
 	}
 
-	public void Play()
+	public void Play(bool playVFX = true)
 	{
 		if (particleType == EffectType.Duration)
 		{
 			timer = duration;
 		}
 
-		if (particleChance >= 1 || UnityEngine.Random.value <= particleChance)
+		if (playVFX && (particleChance >= 1 || UnityEngine.Random.value <= particleChance))
 		{
 			particle.Play();
 			var main = particle.main;

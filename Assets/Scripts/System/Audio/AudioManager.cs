@@ -40,11 +40,14 @@ public class AudioManager : MonoBehaviour
 			PlayMusic(musicClip);
 		}
 
+		ChangeAudioVolume();
 		globalSettings.OnAudioSettingsChanged += ChangeAudioVolume;
 	}
 
 	void ChangeAudioVolume()
 	{
+		if (musicSource == null) return;
+		
 		musicSource.volume = MusicVolume;
 	}
 

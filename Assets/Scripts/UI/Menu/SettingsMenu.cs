@@ -88,7 +88,7 @@ public class SettingsMenu : MenuBase
 		enableVFXToggle.isOn = GlobalSettings.enableVFX;
 		swordTrailsToggle.isOn = GlobalSettings.swordTrails;
 		gunMuzzleFlashesToggle.isOn = GlobalSettings.gunMuzzleFlashes;
-		bulletDecalsToggle.isOn = GlobalSettings.bulletDecals;
+		bulletDecalsToggle.isOn = GlobalSettings.bulletHoles;
 		bloodSplatterToggle.isOn = GlobalSettings.bloodSplatter;
 
 		enableVFXToggle.onValueChanged.AddListener(OnEnableVFXChanged);
@@ -148,7 +148,7 @@ public class SettingsMenu : MenuBase
 
 	void OnBulletDecalsChanged(bool value)
 	{
-		GlobalSettings.bulletDecals = value;
+		GlobalSettings.bulletHoles = value;
 		GlobalSettings.SaveVFX();
 	}
 

@@ -20,6 +20,9 @@ public partial class Gun : MonoBehaviour
 	int monsterLayer;
 	int environmentLayer;
 	LayerMask hitLayerMask;
+
+	GlobalSettings GlobalSettings => GlobalSettingsManager.Instance.settings;
+	bool EnableVFX => GlobalSettings.enableVFX;
 	#endregion
 
 	#region Methods
@@ -34,7 +37,7 @@ public partial class Gun : MonoBehaviour
 
 	public void Shoot(float spread)
 	{
-		muzzleFlashFX.Play();
+		muzzleFlashFX.Play(EnableVFX && GlobalSettings.gunMuzzleFlashes);
 
 		Vector3 rayDirection = Quaternion.Euler(
 			UnityEngine.Random.Range(-spread, spread) * spreadMultiplier,
@@ -43,7 +46,7 @@ public partial class Gun : MonoBehaviour
 		) * cameraTransform.forward;
 
 		bulletTrailFX.transform.rotation = Quaternion.LookRotation(rayDirection);
-		bulletTrailFX.Play();
+		bulletTrailFX.Play(EnableVFX);
 
 		Ray ray = new(cameraTransform.position, rayDirection);
 
@@ -52,7 +55,7 @@ public partial class Gun : MonoBehaviour
 			if (hit.collider.gameObject.layer == monsterLayer)
 			{
 				bloodSpurtFX.transform.SetPositionAndRotation(hit.point - rayDirection * 0.01f, Quaternion.LookRotation(hit.normal));
-				bloodSpurtFX.Play();
+				bloodSpurtFX.Play(EnableVFX && GlobalSettings.bloodSplatter);
 
 				MonsterHitbox monsterHitbox = hit.collider.GetComponent<MonsterHitbox>();
 				OnHitMonster?.Invoke(monsterHitbox.monster, monsterHitbox.multiplier);
@@ -60,7 +63,7 @@ public partial class Gun : MonoBehaviour
 			else
 			{
 				bulletHoleFX.transform.SetPositionAndRotation(hit.point - rayDirection * 0.01f, Quaternion.LookRotation(hit.normal));
-				bulletHoleFX.Play();
+				bulletHoleFX.Play(EnableVFX && GlobalSettings.bulletHoles);
 			}
 		}
 	}

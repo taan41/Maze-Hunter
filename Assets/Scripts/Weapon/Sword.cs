@@ -21,6 +21,9 @@ public partial class Sword : MonoBehaviour
 	bool isGlowing;
 	float skillTimer;
 
+	GlobalSettings GlobalSettings => GlobalSettingsManager.Instance.settings;
+	bool EnableVFX => GlobalSettings.enableVFX;
+
 	void Awake()
 	{
 		if (hitbox == null) hitbox = GetComponent<BoxCollider>();
@@ -58,7 +61,7 @@ public partial class Sword : MonoBehaviour
 
 				Vector3 hitPoint = other.ClosestPoint(transform.position);
 				onHitFX.transform.SetPositionAndRotation(hitPoint, Quaternion.LookRotation(transform.position - other.transform.position));
-				onHitFX.Play();
+				onHitFX.Play(EnableVFX);
 			}
 		}
 	}
@@ -81,11 +84,11 @@ public partial class Sword : MonoBehaviour
 		{
 			if (isGlowing)
 			{
-				electricTrailFX.Play();
+				electricTrailFX.Play(EnableVFX && GlobalSettings.swordTrails);
 			}
 			else
 			{
-				trailFX.Play();
+				trailFX.Play(EnableVFX && GlobalSettings.swordTrails);
 			}
 		}
 		else

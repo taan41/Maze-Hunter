@@ -30,6 +30,7 @@ public class PauseMenu : MenuBase
 	void OnMainMenuClicked()
 	{
 		Close(false);
+		Time.timeScale = 1f;
 		SceneManager.Instance.LoadScene(SceneManager.Instance.MainMenu);
 	}
 

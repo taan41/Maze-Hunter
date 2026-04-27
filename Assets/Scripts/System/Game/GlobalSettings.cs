@@ -19,7 +19,7 @@ public class GlobalSettings
 	public bool enableVFX = true;
 	public bool swordTrails = true;
 	public bool gunMuzzleFlashes = true;
-	public bool bulletDecals = true;
+	public bool bulletHoles = true;
 	public bool bloodSplatter = true;
 
 	[ContextMenu("Restore Settings")]
@@ -40,7 +40,7 @@ public class GlobalSettings
 		enableVFX = PlayerPrefs.GetInt("EnableVFX", enableVFX ? 1 : 0) == 1;
 		swordTrails = PlayerPrefs.GetInt("SwordTrails", swordTrails ? 1 : 0) == 1;
 		gunMuzzleFlashes = PlayerPrefs.GetInt("GunMuzzleFlashes", gunMuzzleFlashes ? 1 : 0) == 1;
-		bulletDecals = PlayerPrefs.GetInt("BulletDecals", bulletDecals ? 1 : 0) == 1;
+		bulletHoles = PlayerPrefs.GetInt("BulletDecals", bulletHoles ? 1 : 0) == 1;
 		bloodSplatter = PlayerPrefs.GetInt("BloodSplatter", bloodSplatter ? 1 : 0) == 1;
 
 		ApplyGraphicsSettings();
@@ -58,7 +58,7 @@ public class GlobalSettings
 		enableVFX = true;
 		swordTrails = true;
 		gunMuzzleFlashes = true;
-		bulletDecals = true;
+		bulletHoles = true;
 		bloodSplatter = true;
 
 		SaveAudio();
@@ -93,7 +93,7 @@ public class GlobalSettings
 		PlayerPrefs.SetInt("EnableVFX", enableVFX ? 1 : 0);
 		PlayerPrefs.SetInt("SwordTrails", swordTrails ? 1 : 0);
 		PlayerPrefs.SetInt("GunMuzzleFlashes", gunMuzzleFlashes ? 1 : 0);
-		PlayerPrefs.SetInt("BulletDecals", bulletDecals ? 1 : 0);
+		PlayerPrefs.SetInt("BulletDecals", bulletHoles ? 1 : 0);
 		PlayerPrefs.SetInt("BloodSplatter", bloodSplatter ? 1 : 0);
 		PlayerPrefs.Save();
 	}
