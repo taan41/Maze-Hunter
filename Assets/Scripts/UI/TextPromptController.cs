@@ -17,9 +17,9 @@ public class TextPromptController : MonoBehaviour
 
 	void UpdateInteractPrompt()
 	{
-		if (playerInteractor.CurrentInteractable != null)
+		if (playerInteractor.FocusedInteractable != null)
 		{
-			currentInteractable = playerInteractor.CurrentInteractable;
+			currentInteractable = playerInteractor.FocusedInteractable;
 
 			currentInteractable.OnStateChanged += UpdateInteractPromptText;
 			UpdateInteractPromptText();

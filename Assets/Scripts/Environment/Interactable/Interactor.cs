@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Interactor : MonoBehaviour
 {
-	public enum CurrentInteractableRule
+	public enum FocusRule
 	{
 		Closest,
 		First,
@@ -15,25 +15,51 @@ public class Interactor : MonoBehaviour
 	public event Action OnInteractableChanged;
 
 	[Header("Interactor Settings")]
-	public CurrentInteractableRule currentInteractableRule;
+	public FocusRule focusRule;
 
-	public Interactable CurrentInteractable { get; private set; }
+	public Interactable FocusedInteractable { get; private set; }
 
 	readonly List<Interactable> interactablesInRange = new();
 
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.TryGetComponent(out Interactable interactable))
+		{
+			if (interactable.autoPerform)
+			{
+				PerformInteraction(interactable, true);
+			}
+			else
+			{
+				AddInteractable(interactable);
+			}
+		}
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.TryGetComponent(out Interactable interactable))
+		{
+			RemoveInteractable(interactable);
+		}
+	}
+
 	public void PerformCurrentInteraction()
 	{
-		if (CurrentInteractable != null)
+		if (FocusedInteractable != null)
 		{
-			CurrentInteractable.Interact();
+			PerformInteraction(FocusedInteractable);
 		}
 	}
 
 	public void PerformInteraction(Interactable interactable, bool bypassRangeCheck = false)
 	{
-		if (bypassRangeCheck || interactablesInRange.Contains(interactable))
+		if (!bypassRangeCheck && !interactablesInRange.Contains(interactable)) return;
+
+		interactable.Interact();
+		if (interactable == null || !interactable.gameObject.activeSelf || interactable.useCount == 0)
 		{
-			interactable.Interact();
+			RemoveInteractable(interactable);
 		}
 	}
 
@@ -41,15 +67,15 @@ public class Interactor : MonoBehaviour
 	{
 		if (interactablesInRange.Count == 0)
 		{
-			CurrentInteractable = null;
+			FocusedInteractable = null;
 		}
 		else
 		{
-			CurrentInteractable = currentInteractableRule switch
+			FocusedInteractable = focusRule switch
 			{
-				CurrentInteractableRule.Closest => GetClosestInteractable(),
-				CurrentInteractableRule.First => interactablesInRange[0],
-				CurrentInteractableRule.Last => interactablesInRange[^1],
+				FocusRule.Closest => GetClosestInteractable(),
+				FocusRule.First => interactablesInRange[0],
+				FocusRule.Last => interactablesInRange[^1],
 				_ => null,
 			};
 		}
@@ -83,10 +109,7 @@ public class Interactor : MonoBehaviour
 
 	public void RemoveInteractable(Interactable interactable)
 	{
-		if (interactablesInRange.Contains(interactable))
-		{
-			interactablesInRange.Remove(interactable);
-			UpdateCurrentInteractable();
-		}
+		interactablesInRange.Remove(interactable);
+		UpdateCurrentInteractable();
 	}
 }

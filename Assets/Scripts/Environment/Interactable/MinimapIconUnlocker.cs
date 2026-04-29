@@ -25,7 +25,6 @@ public class MinimapIconUnlocker : Interactable
 		if (minimapIcon != null)
 		{
 			minimapIcon.SetActive(true);
-			gameObject.SetActive(false);
 		}
 	}
 }

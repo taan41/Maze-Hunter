@@ -13,6 +13,5 @@ public class Objective : Interactable
 	protected override void PerformAction(int state)
 	{
 		GameProgress.Instance.completedObjectiveCount++;
-		gameObject.SetActive(false);
 	}
 }

@@ -8,10 +8,5 @@ public class Recharger : Interactable
 	protected override void PerformAction(int state)
 	{
 		Player.Instance.energy.Change(Player.Instance.energy.max);
-
-		if (state == 0)
-		{
-			gameObject.SetActive(false);
-		}
 	}
 }

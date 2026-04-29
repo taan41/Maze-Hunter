@@ -9,15 +9,23 @@ public abstract class Interactable : MonoBehaviour
 	[Header("Interaction Settings")]
 	public bool autoPerform = false;
 	public float cooldown = 0f;
+	public int useCount = 1;
 	public int stateCount = 1;
 	public string[] prompts;
 
+	public int useCountLeft = 1;
 	protected int currentState = 0;
 	protected bool isOnCooldown = false;
+
+	void Awake()
+	{
+		useCountLeft = useCount;
+	}
 
 	public void Interact()
 	{
 		if (isOnCooldown) return;
+		if (useCountLeft == 0) return;
 
 		currentState++;
 		if (currentState >= stateCount)
@@ -36,6 +44,15 @@ public abstract class Interactable : MonoBehaviour
 		if (stateCount > 1)
 		{
 			OnStateChanged?.Invoke();
+		}
+
+		if (useCount > 0)
+		{
+			useCountLeft--;
+			if (useCountLeft == 0)
+			{
+				gameObject.SetActive(false);
+			}
 		}
 	}
 
@@ -62,26 +79,26 @@ public abstract class Interactable : MonoBehaviour
 		return "interact";
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.TryGetComponent(out Interactor interactor))
-		{
-			if (autoPerform)
-			{
-				interactor.PerformInteraction(this, true);
-			}
-			else
-			{
-				interactor.AddInteractable(this);
-			}
-		}
-	}
+	// void OnTriggerEnter(Collider other)
+	// {
+	// 	if (other.TryGetComponent(out Interactor interactor))
+	// 	{
+	// 		if (autoPerform)
+	// 		{
+	// 			interactor.PerformInteraction(this, true);
+	// 		}
+	// 		else
+	// 		{
+	// 			interactor.AddInteractable(this);
+	// 		}
+	// 	}
+	// }
 
-	void OnTriggerExit(Collider other)
-	{
-		if (!autoPerform && other.TryGetComponent(out Interactor interactor))
-		{
-			interactor.RemoveInteractable(this);
-		}
-	}
+	// void OnTriggerExit(Collider other)
+	// {
+	// 	if (!autoPerform && other.TryGetComponent(out Interactor interactor))
+	// 	{
+	// 		interactor.RemoveInteractable(this);
+	// 	}
+	// }
 }

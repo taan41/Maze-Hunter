@@ -1281,8 +1281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   existingObject: {fileID: 0}
-  destination: {fileID: 4797036443670651233}
   teleportPlayer: 1
+  destination: {fileID: 4797036443670651233}
 --- !u!1 &8371756102238538802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
 --- !u!1 &8838280098259845608
@@ -3755,6 +3756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8911486591287195171}
     m_Modifications:
+    - target: {fileID: 2055773972372954194, guid: cb2ba6792ebe5e448af3e434a3be0320, type: 3}
+      propertyPath: useCount
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5172178002254222748, guid: cb2ba6792ebe5e448af3e434a3be0320, type: 3}
       propertyPath: m_Name
       value: Big door

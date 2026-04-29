@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PauseMenu : MenuBase
@@ -31,11 +32,14 @@ public class PauseMenu : MenuBase
 	{
 		Close(false);
 		Time.timeScale = 1f;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 		SceneManager.Instance.LoadScene(SceneManager.Instance.MainMenu);
 	}
 
 	void OnQuitClicked()
 	{
+		Close(true);
 		Application.Quit();
 	}
 
@@ -47,6 +51,8 @@ public class PauseMenu : MenuBase
 		if (pauseTime)
 		{
 			Time.timeScale = 0f;
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 			if (GameProgress.Instance != null)
 			{
 				GameProgress.Instance.SetTimeTracking(false);
@@ -62,6 +68,8 @@ public class PauseMenu : MenuBase
 		if (resumeTime)
 		{
 			Time.timeScale = 1f;
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 			if (GameProgress.Instance != null)
 			{
 				GameProgress.Instance.SetTimeTracking(true);

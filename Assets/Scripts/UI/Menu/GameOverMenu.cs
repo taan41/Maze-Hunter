@@ -38,6 +38,8 @@ public class GameOverMenu : MenuBase
 	{
 		base.Open();
 		Time.timeScale = 0f;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 
 		var scoreData = GameProgress.Instance.CalculateScore(completedMission);
 

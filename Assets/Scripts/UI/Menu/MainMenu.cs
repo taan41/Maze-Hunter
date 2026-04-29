@@ -13,5 +13,7 @@ public class MainMenu : MenuBase
 	void OnStartGameClicked()
 	{
 		SceneManager.Instance.LoadScene(SceneManager.Instance.GameScene);
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 }
