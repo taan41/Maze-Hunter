@@ -13,7 +13,6 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Pp]ackages/
 /[Ss]erializedBuildInfo/
 *.log
 
@@ -106,3 +105,6 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+/[Pp]ackages/com.heurekagames.assethunterpro/
+/[Pp]ackages/com.heurekagames.utils/
