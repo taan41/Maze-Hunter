@@ -8,6 +8,7 @@ This is a third-person action game built in Unity 6.0. In the game, the player h
 
 ## Gameplay
 
+Preview GIF:
 <figure>
   <img src="https://github.com/taan41/Maze-Hunter/blob/main/Assets/Readme/gameplay_preview.gif" width="600" alt="Preview gif">
 </figure>
