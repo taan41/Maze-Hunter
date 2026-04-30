@@ -24,7 +24,7 @@ Preview GIF:
 - **Monster AI:** NavMesh-based AI that detects the player by range and line-of-sight, with close integration of Animator for smooth behavior transitions
 - **Minimap:** Dynamic minimap that reveals map objectives as player explores
 - **Score system:** Scored by time elapsed, objectives collected, kills, and completion bonus; configurable via ScriptableObject, with top 10 entries persisted locally as JSON
-- **Settings menu:** Persistent aduio/graphics settings saved via PlayerPrefs
+- **Settings menu:** Persistent audio/graphics settings saved via PlayerPrefs
 
 ---
 ## Tech Stack
