@@ -14,6 +14,7 @@ Preview GIF:
 </figure>
 
 [Gameplay preview on Youtube](https://youtu.be/aGZjZ5nt5Hc)
+
 [Maze generation process on Youtube](https://youtu.be/m9A2ahXin3M)
 
 ---

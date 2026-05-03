@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 6347604506511624401}
   - component: {fileID: 6264750884417780589}
   - component: {fileID: 2394395126962344088}
+  - component: {fileID: 4043536085266453655}
   m_Layer: 10
   m_Name: Minimap Icon
   m_TagString: Untagged
@@ -333,7 +334,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  rotationOffset: 0
+  rotationConstraint: {fileID: 0}
+--- !u!1818360609 &4043536085266453655
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982171062796805004}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &3282252469710552652
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,8 +530,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
   minimapIcon: {fileID: 2982171062796805004}
 --- !u!1 &5190135799062322314
 GameObject:
@@ -641,8 +662,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
 --- !u!1 &6192552300650660941
 GameObject:
   m_ObjectHideFlags: 0

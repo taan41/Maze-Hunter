@@ -185,8 +185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
   minimapIcon: {fileID: 9166694665904309984}
 --- !u!1 &2834232458546516458
 GameObject:
@@ -315,8 +317,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
 --- !u!1 &5887164008214352058
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +529,7 @@ GameObject:
   - component: {fileID: 3267489722281567049}
   - component: {fileID: 7027952382658806115}
   - component: {fileID: 4372761522143922392}
+  - component: {fileID: 279789777435145047}
   m_Layer: 10
   m_Name: Minimap Icon
   m_TagString: Untagged
@@ -615,7 +620,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  rotationOffset: 0
+  rotationConstraint: {fileID: 0}
+--- !u!1818360609 &279789777435145047
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9166694665904309984}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &9199385108161885562
 GameObject:
   m_ObjectHideFlags: 0

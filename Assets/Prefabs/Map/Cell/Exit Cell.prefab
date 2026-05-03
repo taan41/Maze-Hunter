@@ -127,8 +127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
 --- !u!1 &3760266646140344459
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,8 +199,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPerform: 0
   cooldown: 0
+  useCount: 1
   stateCount: 1
   prompts: []
+  useCountLeft: 1
   minimapIcon: {fileID: 5230544580556087934}
 --- !u!1 &4614237858271216484
 GameObject:
